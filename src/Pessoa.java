@@ -2,18 +2,8 @@ public abstract class Pessoa {
     protected int idade;
     protected String nome;
 
-    //construtor aluno
-    public Pessoa(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    public Pessoa(String nome) {
-
-    }
-    public String exibirDados() {
-        return "Nome : " + nome + " idade: " + idade;
-    }
+    public abstract void quemSouEu();
+    public abstract void minhaAtividade();
 
     @Override
     public String toString() {
@@ -21,6 +11,21 @@ public abstract class Pessoa {
                 "idade=" + idade +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    //construtor aluno
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String exibirDados(){
+        return "Nome: " + nome + ", Idade: " + idade;
+    }
+
+
+    public Pessoa(String nome) {
+
     }
 
     public Pessoa() {
@@ -42,6 +47,4 @@ public abstract class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
 }
