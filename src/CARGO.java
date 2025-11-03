@@ -3,5 +3,5 @@ public enum CARGO {
     Coordenador,
     Secretário,
     Auxiliar,
-    Aluno
+    professor;
 }

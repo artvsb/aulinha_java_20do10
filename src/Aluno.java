@@ -1,16 +1,39 @@
-// uma folha da árvore binária é uma classe sem filhos -> CLASSE 'FINAL'
-
 public final class Aluno extends Pessoa {
     private int matricula;
     private double nota1, nota2, nota3, media;
-    private final CARGO cargo;
+
+    public void calcularMedia() {
+        media = (nota1+nota2+nota3)/3;
+    }
+
+    @Override
+    public void quemSouEu() {
+
+    }
+
+    @Override
+    public void minhaAtividade() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "matricula=" + matricula +
+                ", nota1=" + nota1 +
+                ", nota2=" + nota2 +
+                ", nota3=" + nota3 +
+                ", media=" + media +
+                ", idade=" + idade +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 
     //construtor inserido em Aluno devido aos dados de parâmetros (nome, idade, matricula) prefixados na main
     //construtor tem como função setar os dados para a memória
-    public Aluno(String nome, int idade, int matricula, cargo.Aluno) {
+    public Aluno(String nome, int idade, int matricula) {
         super(nome, idade);
         this.matricula = matricula;
-        this.cargo = cargo;
     }
 
     public Aluno() {
@@ -56,44 +79,4 @@ public final class Aluno extends Pessoa {
     public void setMedia(double media) {
         this.media = media;
     }
-
-    public Aluno(String nome, int idade) {
-        super(nome, idade);
-    }
-
-    public Aluno(String nome) {
-        super(nome);
-    }
-
-    @Override
-    public String exibirDados() {
-        return super.exibirDados();
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public int getIdade() {
-        return super.getIdade();
-    }
-
-    @Override
-    public void setIdade(int idade) {
-        super.setIdade(idade);
-    }
-
-    @Override
-    public String getNome() {
-        return super.getNome();
-    }
-
-    @Override
-    public void setNome(String nome) {
-        super.setNome(nome);
-    }
-
-
 }
