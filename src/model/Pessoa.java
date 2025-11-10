@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Pessoa {
     protected int idade;
     protected String nome;
@@ -7,7 +9,7 @@ public abstract class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
+        return "model.Pessoa{" +
                 "idade=" + idade +
                 ", nome='" + nome + '\'' +
                 '}';

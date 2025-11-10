@@ -1,3 +1,5 @@
+package model;
+
 public final class Aluno extends Pessoa {
     private int matricula;
     private double nota1, nota2, nota3, media;
@@ -18,7 +20,7 @@ public final class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno{" +
+        return "model.Aluno{" +
                 "matricula=" + matricula +
                 ", nota1=" + nota1 +
                 ", nota2=" + nota2 +
@@ -29,7 +31,7 @@ public final class Aluno extends Pessoa {
                 '}';
     }
 
-    //construtor inserido em Aluno devido aos dados de parâmetros (nome, idade, matricula) prefixados na main
+    //construtor inserido em model.Aluno devido aos dados de parâmetros (nome, idade, matricula) prefixados na main
     //construtor tem como função setar os dados para a memória
     public Aluno(String nome, int idade, int matricula) {
         super(nome, idade);

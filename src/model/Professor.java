@@ -1,3 +1,8 @@
+package model;
+
+import enums.CARGO;
+import model.interfaces.FolhaPagamento;
+
 public final class Professor extends Pessoa implements FolhaPagamento {
         private String especialidade;
         public CARGO cargo;
@@ -9,7 +14,7 @@ public final class Professor extends Pessoa implements FolhaPagamento {
 
         @Override
         public String toString() {
-            return "Professor{" +
+            return "model.Professor{" +
                     "especialidade='" + especialidade + '\'' +
                     ", cargo=" + cargo +
                     '}';
